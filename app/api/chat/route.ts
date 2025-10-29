@@ -401,7 +401,7 @@ async function handleGemini(message: string, conversationHistory: any[] | undefi
   }));
 
   // Only include system instruction if there's no history
-  const contents = history.length === 0
+  const contents: any[] = history.length === 0
     ? [systemMessage, { role: 'user', parts: [{ text: message }] }]
     : [...history, { role: 'user', parts: [{ text: message }] }];
 
