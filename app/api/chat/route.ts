@@ -128,7 +128,7 @@ export async function POST(request: NextRequest) {
 }
 
 async function handleOpenAI(message: string, conversationHistory: any[] | undefined, apiKey: string, keys: any) {
-  const messages = [
+  const messages: any[] = [
     {
       role: 'system',
       content: SYSTEM_PROMPT,
